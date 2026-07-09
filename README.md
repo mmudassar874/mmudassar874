@@ -93,5 +93,5 @@ Planned public repositories:
 ## Contact
 
 - GitHub: [mmudassar874](https://github.com/mmudassar874)
-- LinkedIn: Add your LinkedIn URL here
+- LinkedIn: www.linkedin.com/in/muhammdmudassir
 
