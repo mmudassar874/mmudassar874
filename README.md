@@ -2,7 +2,7 @@
 
 **Self-taught Quantitative Trading Systems Developer | FinTech SaaS Founder | Python, FastAPI, PostgreSQL, MQL5, Trading Infrastructure**
 
-I build systematic trading and data-intelligence systems with a focus on architecture, validation, risk governance, and research-to-live reliability.
+I build systematic trading and data-intelligence systems with a focus on architecture, validation, risk governance, market-data workflows, and research-to-live reliability.
 
 My strongest work is around **AlphaQuant V12**, a private production-grade algorithmic trading system architecture for systematic XAUUSD research, execution control, quality management, and risk validation.
 
@@ -10,17 +10,17 @@ My strongest work is around **AlphaQuant V12**, a private production-grade algor
 
 ## Featured Public Work
 
-### AlphaQuant V12 Case Study
+### 1. AlphaQuant V12 Case Study
 
 Public sanitized case study of a private algorithmic trading system architecture.
 
 [View Repository](https://github.com/mmudassar874/alphaquant-v12-case-study)
 
-What it demonstrates:
+Demonstrates:
 
 - Systematic trading architecture
-- Risk-engine philosophy
 - Decision-pipeline design
+- Risk-engine philosophy
 - QMS/testing structure
 - Research-to-live parity thinking
 - Safe JSON examples
@@ -28,7 +28,30 @@ What it demonstrates:
 - Pytest test suite
 - GitHub Actions CI
 
-![Tests](https://github.com/mmudassar874/alphaquant-v12-case-study/actions/workflows/tests.yml/badge.svg)
+![AlphaQuant Tests](https://github.com/mmudassar874/alphaquant-v12-case-study/actions/workflows/tests.yml/badge.svg)
+
+---
+
+### 2. Trading Risk Engine Python
+
+Standalone public-safe Python risk-engine demo for systematic trading systems.
+
+[View Repository](https://github.com/mmudassar874/trading-risk-engine-python)
+
+Demonstrates:
+
+- Candidate signal model
+- Market-state validation
+- Account-state validation
+- Spread/friction gate
+- Volatility-aware risk reduction
+- Drawdown-aware risk reduction
+- Hard drawdown blocking
+- Position-sizing demo logic
+- 12-test pytest suite
+- GitHub Actions CI
+
+![Risk Engine Tests](https://github.com/mmudassar874/trading-risk-engine-python/actions/workflows/tests.yml/badge.svg)
 
 ---
 
@@ -37,7 +60,7 @@ What it demonstrates:
 | Area | Focus |
 |---|---|
 | Quant Systems | Systematic trading architecture, signal governance, validation layers |
-| Risk Infrastructure | Drawdown-aware control, volatility-aware decisions, execution safety |
+| Risk Infrastructure | Drawdown-aware control, volatility-aware decisions, position sizing, execution safety |
 | Market Data | Data quality, feature hydration, pipeline design, PostgreSQL workflows |
 | Backend Systems | FastAPI services, Python automation, database-backed workflows |
 | Testing | Pytest, parity checks, robustness testing, end-to-end validation |
@@ -56,15 +79,13 @@ I am building a public portfolio around:
 - C++ quant/low-latency fundamentals
 - FinTech SaaS infrastructure
 
-Planned public repositories:
-
-| Repository | Purpose |
-|---|---|
-| alphaquant-v12-case-study | Public sanitized architecture case study |
-| trading-risk-engine-python | Standalone public risk-engine demo |
-| market-data-pipeline-postgres | Market-data ingestion and validation pipeline |
-| cpp-quant-lab | C++ foundations for quant development |
-| orderbook-and-low-latency-cpp | Order book and performance-focused C++ practice |
+| Repository | Status | Purpose |
+|---|---|---|
+| alphaquant-v12-case-study | Public | Sanitized architecture and engineering case study |
+| trading-risk-engine-python | Public | Tested standalone risk-engine demo |
+| market-data-pipeline-postgres | Planned | Market-data ingestion and validation pipeline |
+| cpp-quant-lab | Planned | C++ foundations for quant development |
+| orderbook-and-low-latency-cpp | Planned | Order book and performance-focused C++ practice |
 
 ---
 
@@ -93,5 +114,5 @@ Planned public repositories:
 ## Contact
 
 - GitHub: [mmudassar874](https://github.com/mmudassar874)
-- LinkedIn: www.linkedin.com/in/muhammdmudassir
+- LinkedIn: [Muhammad Mudassir](https://www.linkedin.com/in/muhammadmudassir)
 
