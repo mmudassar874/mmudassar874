@@ -1,6 +1,6 @@
 ﻿# Muhammad Mudassir
 
-**Self-taught Quantitative Trading Systems Developer | FinTech SaaS Founder | Python, FastAPI, PostgreSQL, MQL5, Trading Infrastructure**
+**Self-taught Quantitative Trading Systems Developer | FinTech SaaS Founder | Python, FastAPI, PostgreSQL, MQL5, C++, Trading Infrastructure**
 
 I build systematic trading and data-intelligence systems with a focus on architecture, validation, risk governance, market-data workflows, and research-to-live reliability.
 
@@ -78,6 +78,30 @@ Demonstrates:
 
 ---
 
+### 4. C++ Quant Lab
+
+Public C++ quant-development lab focused on clean fundamentals for systematic trading systems.
+
+[View Repository](https://github.com/mmudassar874/cpp-quant-lab)
+
+Demonstrates:
+
+- Simple returns
+- Log returns
+- Mean and sample standard deviation
+- Annualized volatility
+- Rolling mean
+- Z-score
+- Max drawdown
+- Risk-based position sizing
+- CMake build system
+- C++ test executable
+- GitHub Actions CI
+
+![C++ Tests](https://github.com/mmudassar874/cpp-quant-lab/actions/workflows/cpp-tests.yml/badge.svg?branch=main)
+
+---
+
 ## Engineering Focus
 
 | Area | Focus |
@@ -86,7 +110,8 @@ Demonstrates:
 | Risk Infrastructure | Drawdown-aware control, volatility-aware decisions, position sizing, execution safety |
 | Market Data | Tick ingestion, OHLC bar construction, data-quality audits, PostgreSQL workflows |
 | Backend Systems | FastAPI services, Python automation, database-backed workflows |
-| Testing | Pytest, parity checks, robustness testing, end-to-end validation |
+| C++ Quant Development | Numerical utilities, risk math, CMake, tested low-level foundations |
+| Testing | Pytest, C++ tests, parity checks, robustness testing, GitHub Actions |
 | Trading Integration | MQL5 / MT5 execution-side workflows and Python bridge design |
 
 ---
@@ -107,7 +132,7 @@ I am building a public portfolio around:
 | alphaquant-v12-case-study | Public | Sanitized architecture and engineering case study |
 | trading-risk-engine-python | Public | Tested standalone risk-engine demo |
 | market-data-pipeline-postgres | Public | PostgreSQL market-data pipeline demo |
-| cpp-quant-lab | Planned | C++ foundations for quant development |
+| cpp-quant-lab | Public | C++ quant math and risk fundamentals |
 | orderbook-and-low-latency-cpp | Planned | Order book and performance-focused C++ practice |
 
 ---
@@ -119,6 +144,7 @@ I am building a public portfolio around:
 - Bad market data can poison every downstream layer.
 - Backtests are not enough without validation and parity.
 - Research behavior and live behavior must remain aligned.
+- C++ fundamentals matter for serious quant engineering.
 - Undocumented logic is unsafe logic.
 - A system should fail safely before it fails silently.
 
@@ -126,10 +152,11 @@ I am building a public portfolio around:
 
 ## Technical Stack
 
-**Languages:** Python, MQL5, SQL, C++ learning path  
+**Languages:** Python, MQL5, SQL, C++  
 **Backend:** FastAPI, REST APIs, background services  
 **Data:** PostgreSQL, pandas, NumPy, market-data pipelines  
-**Testing:** pytest, integration testing, robustness checks, GitHub Actions  
+**C++:** C++20, CMake, numerical utilities, risk math  
+**Testing:** pytest, C++ test executables, integration testing, GitHub Actions  
 **Trading:** MetaTrader 5, systematic trading architecture, risk governance  
 **Tools:** Git, GitHub Actions, VS Code, Windows/PowerShell workflows  
 
