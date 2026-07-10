@@ -55,13 +55,36 @@ Demonstrates:
 
 ---
 
+### 3. Market Data Pipeline Postgres
+
+Public-safe PostgreSQL + Python demo for market-data ingestion, OHLC bar construction, and data-quality auditing.
+
+[View Repository](https://github.com/mmudassar874/market-data-pipeline-postgres)
+
+Demonstrates:
+
+- PostgreSQL schema design
+- Synthetic tick ingestion model
+- 1-minute and 15-minute OHLC bar construction
+- SQL migrations
+- Data-quality audit queries
+- Symbol and timestamp indexing
+- BRIN index example for time-series data
+- Python helper layer
+- Pytest test suite
+- GitHub Actions CI with PostgreSQL service
+
+![Market Data Tests](https://github.com/mmudassar874/market-data-pipeline-postgres/actions/workflows/tests.yml/badge.svg?branch=main)
+
+---
+
 ## Engineering Focus
 
 | Area | Focus |
 |---|---|
 | Quant Systems | Systematic trading architecture, signal governance, validation layers |
 | Risk Infrastructure | Drawdown-aware control, volatility-aware decisions, position sizing, execution safety |
-| Market Data | Data quality, feature hydration, pipeline design, PostgreSQL workflows |
+| Market Data | Tick ingestion, OHLC bar construction, data-quality audits, PostgreSQL workflows |
 | Backend Systems | FastAPI services, Python automation, database-backed workflows |
 | Testing | Pytest, parity checks, robustness testing, end-to-end validation |
 | Trading Integration | MQL5 / MT5 execution-side workflows and Python bridge design |
@@ -83,7 +106,7 @@ I am building a public portfolio around:
 |---|---|---|
 | alphaquant-v12-case-study | Public | Sanitized architecture and engineering case study |
 | trading-risk-engine-python | Public | Tested standalone risk-engine demo |
-| market-data-pipeline-postgres | Planned | Market-data ingestion and validation pipeline |
+| market-data-pipeline-postgres | Public | PostgreSQL market-data pipeline demo |
 | cpp-quant-lab | Planned | C++ foundations for quant development |
 | orderbook-and-low-latency-cpp | Planned | Order book and performance-focused C++ practice |
 
@@ -93,6 +116,7 @@ I am building a public portfolio around:
 
 - A trading system is more than an entry signal.
 - Risk control is part of the decision pipeline.
+- Bad market data can poison every downstream layer.
 - Backtests are not enough without validation and parity.
 - Research behavior and live behavior must remain aligned.
 - Undocumented logic is unsafe logic.
@@ -105,7 +129,7 @@ I am building a public portfolio around:
 **Languages:** Python, MQL5, SQL, C++ learning path  
 **Backend:** FastAPI, REST APIs, background services  
 **Data:** PostgreSQL, pandas, NumPy, market-data pipelines  
-**Testing:** pytest, integration testing, robustness checks  
+**Testing:** pytest, integration testing, robustness checks, GitHub Actions  
 **Trading:** MetaTrader 5, systematic trading architecture, risk governance  
 **Tools:** Git, GitHub Actions, VS Code, Windows/PowerShell workflows  
 
