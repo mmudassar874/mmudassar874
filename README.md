@@ -2,6 +2,8 @@
 
 **Self-taught Quantitative Trading Systems Developer | FinTech SaaS Founder | Python, FastAPI, PostgreSQL, MQL5, C++, Trading Infrastructure**
 
+**Web Resume:** https://mmudassar874.github.io
+
 I build systematic trading and data-intelligence systems with a focus on architecture, validation, risk governance, market-data workflows, and research-to-live reliability.
 
 My strongest work is around **AlphaQuant V12**, a private production-grade algorithmic trading system architecture for systematic XAUUSD research, execution control, quality management, and risk validation.
@@ -184,4 +186,5 @@ Demonstrates:
 
 - GitHub: [mmudassar874](https://github.com/mmudassar874)
 - LinkedIn: [Muhammad Mudassir](https://www.linkedin.com/in/muhammadmudassir)
+
 
