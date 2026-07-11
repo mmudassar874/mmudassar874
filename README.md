@@ -185,6 +185,7 @@ Demonstrates:
 ## Contact
 
 - GitHub: [mmudassar874](https://github.com/mmudassar874)
-- LinkedIn: [Muhammad Mudassir](https://www.linkedin.com/in/muhammadmudassir)
+- LinkedIn: [Muhammad Mudassir](https://www.linkedin.com/in/muhammdmudassir/)
+
 
 
