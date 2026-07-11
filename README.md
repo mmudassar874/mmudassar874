@@ -102,6 +102,31 @@ Demonstrates:
 
 ---
 
+### 5. Order Book and Low-Latency C++
+
+Public C++ order book lab focused on market microstructure and trading-system engineering fundamentals.
+
+[View Repository](https://github.com/mmudassar874/orderbook-and-low-latency-cpp)
+
+Demonstrates:
+
+- Limit order book structure
+- Bid and ask side handling
+- Best bid / best ask
+- Spread calculation
+- Price-level aggregation
+- FIFO matching at same price level
+- Market order execution
+- Partial fills
+- Cancel logic
+- CMake build system
+- C++ test executable
+- GitHub Actions CI
+
+![Order Book Tests](https://github.com/mmudassar874/orderbook-and-low-latency-cpp/actions/workflows/cpp-tests.yml/badge.svg?branch=main)
+
+---
+
 ## Engineering Focus
 
 | Area | Focus |
@@ -110,22 +135,14 @@ Demonstrates:
 | Risk Infrastructure | Drawdown-aware control, volatility-aware decisions, position sizing, execution safety |
 | Market Data | Tick ingestion, OHLC bar construction, data-quality audits, PostgreSQL workflows |
 | Backend Systems | FastAPI services, Python automation, database-backed workflows |
-| C++ Quant Development | Numerical utilities, risk math, CMake, tested low-level foundations |
+| C++ Quant Development | Numerical utilities, risk math, order book fundamentals, CMake |
+| Market Microstructure | Price-time priority, order book behavior, matching logic |
 | Testing | Pytest, C++ tests, parity checks, robustness testing, GitHub Actions |
 | Trading Integration | MQL5 / MT5 execution-side workflows and Python bridge design |
 
 ---
 
-## Current Public Portfolio Direction
-
-I am building a public portfolio around:
-
-- Trading-system architecture
-- Risk engines
-- Market-data pipelines
-- Quant research tooling
-- C++ quant/low-latency fundamentals
-- FinTech SaaS infrastructure
+## Public Portfolio
 
 | Repository | Status | Purpose |
 |---|---|---|
@@ -133,7 +150,7 @@ I am building a public portfolio around:
 | trading-risk-engine-python | Public | Tested standalone risk-engine demo |
 | market-data-pipeline-postgres | Public | PostgreSQL market-data pipeline demo |
 | cpp-quant-lab | Public | C++ quant math and risk fundamentals |
-| orderbook-and-low-latency-cpp | Planned | Order book and performance-focused C++ practice |
+| orderbook-and-low-latency-cpp | Public | C++ order book and market microstructure fundamentals |
 
 ---
 
@@ -145,6 +162,7 @@ I am building a public portfolio around:
 - Backtests are not enough without validation and parity.
 - Research behavior and live behavior must remain aligned.
 - C++ fundamentals matter for serious quant engineering.
+- Market microstructure understanding matters for trading systems.
 - Undocumented logic is unsafe logic.
 - A system should fail safely before it fails silently.
 
@@ -155,7 +173,7 @@ I am building a public portfolio around:
 **Languages:** Python, MQL5, SQL, C++  
 **Backend:** FastAPI, REST APIs, background services  
 **Data:** PostgreSQL, pandas, NumPy, market-data pipelines  
-**C++:** C++20, CMake, numerical utilities, risk math  
+**C++:** C++20, CMake, numerical utilities, risk math, order book fundamentals  
 **Testing:** pytest, C++ test executables, integration testing, GitHub Actions  
 **Trading:** MetaTrader 5, systematic trading architecture, risk governance  
 **Tools:** Git, GitHub Actions, VS Code, Windows/PowerShell workflows  
