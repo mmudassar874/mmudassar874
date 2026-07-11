@@ -1,0 +1,619 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Muhammad Mudassir — Quant Trading Systems Developer</title>
+  <meta name="description" content="Muhammad Mudassir — Quant trading systems developer focused on Python, PostgreSQL, C++, risk engines, market data pipelines, and trading infrastructure." />
+
+  <style>
+    :root {
+      --bg: #070b14;
+      --panel: #0d1423;
+      --panel2: #121d31;
+      --ink: #eef5ff;
+      --muted: #b7c4d7;
+      --soft: #8290a8;
+      --line: rgba(255,255,255,.12);
+      --brand: #2f7cff;
+      --cyan: #11d6c5;
+      --paper: #ffffff;
+      --paper-ink: #152033;
+      --paper-muted: #5f6f86;
+      --shadow: 0 18px 55px rgba(0,0,0,.35);
+      --radius: 22px;
+      --max: 1180px;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 0%, rgba(47,124,255,.22), transparent 36%),
+        radial-gradient(circle at 88% 12%, rgba(17,214,197,.14), transparent 36%),
+        linear-gradient(135deg, #060911 0%, #0a1020 55%, #05070d 100%);
+      line-height: 1.55;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    .page { max-width: var(--max); margin: 0 auto; padding: 28px; }
+    .shell {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+      background: rgba(8, 13, 23, .86);
+      backdrop-filter: blur(18px);
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px;
+      background: rgba(7,11,20,.75);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .btn {
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.07);
+      color: var(--ink);
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight: 850;
+      font-size: 13px;
+    }
+
+    .btn.primary {
+      background: linear-gradient(90deg, var(--brand), #1bc5d2);
+      border: 0;
+      color: white;
+    }
+
+    .hero {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.45fr .9fr;
+      gap: 30px;
+      padding: 48px;
+      background:
+        linear-gradient(115deg, rgba(47,124,255,.25), transparent 40%),
+        linear-gradient(135deg, rgba(255,255,255,.04), rgba(255,255,255,.01));
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: radial-gradient(circle at top left, black 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero > * { position: relative; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 12px;
+      border: 1px solid rgba(47,124,255,.34);
+      border-radius: 999px;
+      color: #dce9ff;
+      background: rgba(47,124,255,.10);
+      font-size: 12px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 0 5px rgba(17,214,197,.12);
+    }
+
+    h1 {
+      margin: 18px 0 6px;
+      font-size: clamp(42px, 6vw, 78px);
+      line-height: .88;
+      letter-spacing: -.07em;
+      font-weight: 950;
+    }
+
+    .accent { color: #7eb0ff; }
+
+    .headline {
+      margin: 20px 0 0;
+      max-width: 850px;
+      color: var(--muted);
+      font-size: clamp(18px, 2.2vw, 25px);
+      line-height: 1.25;
+      font-weight: 750;
+    }
+
+    .subline {
+      margin-top: 16px;
+      color: var(--soft);
+      max-width: 790px;
+      font-size: 15px;
+    }
+
+    .contact-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 24px;
+      border: 1px solid rgba(255,255,255,.13);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.025));
+    }
+
+    .contact-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      color: var(--cyan);
+      font-weight: 900;
+    }
+
+    .contact-list { display: grid; gap: 12px; margin-top: 14px; }
+
+    .contact-item {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 10px;
+      align-items: start;
+      color: var(--muted);
+      font-size: 14px;
+      overflow-wrap: anywhere;
+    }
+
+    .icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      color: var(--ink);
+      background: rgba(47,124,255,.16);
+      border: 1px solid rgba(47,124,255,.25);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+      padding: 18px 48px 0;
+    }
+
+    .metric {
+      padding: 16px;
+      min-height: 100px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 16px;
+      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+    }
+
+    .metric .value {
+      font-size: 27px;
+      font-weight: 950;
+      letter-spacing: -.04em;
+    }
+
+    .metric .label {
+      margin-top: 5px;
+      font-size: 12px;
+      color: var(--soft);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-weight: 800;
+    }
+
+    .metric .note {
+      margin-top: 6px;
+      font-size: 11px;
+      color: rgba(183,196,215,.72);
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: .9fr 1.55fr;
+      gap: 28px;
+      padding: 32px 48px 48px;
+    }
+
+    .section {
+      margin-top: 24px;
+      padding: 24px;
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.045);
+    }
+
+    .section:first-child { margin-top: 0; }
+
+    .section.light {
+      background: rgba(255,255,255,.96);
+      color: var(--paper-ink);
+      border: 0;
+      box-shadow: 0 16px 40px rgba(0,0,0,.18);
+    }
+
+    .section-title {
+      margin: 0 0 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      font-weight: 950;
+      color: #dfe9fb;
+    }
+
+    .light .section-title { color: #0c2144; }
+
+    .section-title:before {
+      content: "";
+      width: 34px;
+      height: 3px;
+      border-radius: 99px;
+      background: linear-gradient(90deg, var(--brand), var(--cyan));
+    }
+
+    .summary {
+      margin: 0;
+      color: #26354b;
+      font-size: 15.5px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      color: #dbe8ff;
+      background: rgba(47,124,255,.13);
+      border: 1px solid rgba(47,124,255,.22);
+    }
+
+    .chip.alt {
+      background: rgba(17,214,197,.10);
+      border-color: rgba(17,214,197,.23);
+      color: #d8fffb;
+    }
+
+    .fit-list { display: grid; gap: 12px; }
+
+    .fit-row {
+      padding: 14px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.055);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    .fit-row b { display: block; margin-bottom: 3px; }
+    .fit-row span { color: var(--muted); font-size: 13px; }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .project-card {
+      padding: 17px;
+      border-radius: 16px;
+      background: #f7f9fd;
+      border: 1px solid #e6edf7;
+    }
+
+    .project-card h3 {
+      margin: 0 0 8px;
+      color: #0f2442;
+      font-size: 16px;
+    }
+
+    .project-card p {
+      margin: 0 0 10px;
+      color: #516176;
+      font-size: 13px;
+    }
+
+    .project-card a {
+      display: inline-flex;
+      margin-top: 4px;
+      font-weight: 850;
+      font-size: 13px;
+      color: #1d5fd0;
+    }
+
+    .timeline { display: grid; gap: 18px; }
+
+    .entry {
+      position: relative;
+      padding-left: 22px;
+      border-left: 2px solid rgba(47,124,255,.25);
+    }
+
+    .entry:before {
+      content: "";
+      position: absolute;
+      left: -6px;
+      top: 4px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--brand);
+      box-shadow: 0 0 0 5px rgba(47,124,255,.12);
+    }
+
+    .entry h3 { margin: 0; font-size: 20px; color: #101d33; }
+    .role-line { margin: 3px 0 10px; color: var(--paper-muted); font-size: 14px; font-weight: 750; }
+    .tagline { margin: 0 0 12px; color: #33435a; }
+
+    ul.clean { margin: 0; padding-left: 18px; color: #33435a; }
+    ul.clean li { margin: 8px 0; }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .proof-card {
+      padding: 16px;
+      border-radius: 16px;
+      background: #f7f9fd;
+      border: 1px solid #e6edf7;
+    }
+
+    .proof-card h4 { margin: 0 0 7px; color: #0f2442; font-size: 15px; }
+    .proof-card p { margin: 0; color: #516176; font-size: 13px; }
+
+    .small-muted { color: var(--soft); font-size: 12px; }
+
+    .footer-note {
+      padding: 18px 48px 34px;
+      color: rgba(183,196,215,.78);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @media (max-width: 920px) {
+      .hero, .content { grid-template-columns: 1fr; padding: 28px; }
+      .metrics { grid-template-columns: repeat(2, minmax(0,1fr)); padding: 18px 28px 0; }
+      .project-grid, .proof-grid { grid-template-columns: 1fr; }
+      .footer-note { padding: 18px 28px 34px; }
+    }
+
+    @media (max-width: 560px) {
+      .page { padding: 12px; }
+      .shell { border-radius: 22px; }
+      h1 { font-size: 44px; }
+      .metrics { grid-template-columns: 1fr; }
+      .hero, .content { padding: 22px; }
+      .section { padding: 18px; }
+      .topbar { flex-wrap: wrap; }
+    }
+
+    @media print {
+      .topbar { display: none; }
+      body { background: #fff; color: #111827; }
+      .page { padding: 0; max-width: none; }
+      .shell { box-shadow: none; border: 0; border-radius: 0; background: #fff; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <a class="btn primary" href="https://github.com/mmudassar874" target="_blank" rel="noopener">GitHub Portfolio</a>
+    <a class="btn" href="#portfolio">Projects</a>
+    <a class="btn" href="#contact">Contact</a>
+    <span class="btn">Ctrl+P → Save as PDF</span>
+  </div>
+
+  <div class="page">
+    <article class="shell">
+      <section class="hero">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> Open to trading systems / quant development roles</div>
+          <h1>Muhammad <span class="accent">Mudassir</span></h1>
+          <p class="headline">Quant Trading Systems Developer · Python/PostgreSQL/C++ · Risk & Market Data Infrastructure</p>
+          <p class="subline">
+            Self-taught quantitative trading systems developer and FinTech SaaS founder building trading infrastructure, risk engines,
+            market-data pipelines, C++ quant foundations, and production analytics systems.
+          </p>
+        </div>
+
+        <aside class="contact-card" id="contact">
+          <div>
+            <div class="contact-title">Contact</div>
+            <div class="contact-list">
+              <a class="contact-item" href="mailto:mmudassar874@gmail.com"><span class="icon">@</span><span>mmudassar874@gmail.com</span></a>
+              <a class="contact-item" href="https://github.com/mmudassar874" target="_blank" rel="noopener"><span class="icon">GH</span><span>github.com/mmudassar874</span></a>
+              <a class="contact-item" href="https://www.linkedin.com/in/muhammadmudassir" target="_blank" rel="noopener"><span class="icon">in</span><span>linkedin.com/in/muhammadmudassir</span></a>
+              <div class="contact-item"><span class="icon">⌖</span><span>Lahore, Pakistan · PKT UTC+5</span></div>
+            </div>
+          </div>
+          <div class="small-muted">Selected documentation, sanitized architecture notes, and technical walkthrough available upon request.</div>
+        </aside>
+      </section>
+
+      <section class="metrics">
+        <div class="metric"><div class="value">4+ yrs</div><div class="label">Trading Study</div><div class="note">Hands-on XAUUSD market work</div></div>
+        <div class="metric"><div class="value">2 yrs</div><div class="label">Algo Systems</div><div class="note">Infrastructure + validation</div></div>
+        <div class="metric"><div class="value">297/297</div><div class="label">QMS Tests</div><div class="note">Private AlphaQuant validation</div></div>
+        <div class="metric"><div class="value">180/180</div><div class="label">Parity Tests</div><div class="note">Live/offline consistency checks</div></div>
+        <div class="metric"><div class="value">5 repos</div><div class="label">Public Proof</div><div class="note">GitHub portfolio with CI</div></div>
+      </section>
+
+      <div class="content">
+        <aside>
+          <section class="section">
+            <h2 class="section-title">Core Strengths</h2>
+            <div class="fit-list">
+              <div class="fit-row"><b>Trading Systems</b><span>Decision pipelines, risk governance, signal lifecycle, research-to-live alignment.</span></div>
+              <div class="fit-row"><b>Python Infrastructure</b><span>FastAPI, pandas/NumPy, pytest, automation, bridge services, validation tooling.</span></div>
+              <div class="fit-row"><b>Market Data Engineering</b><span>PostgreSQL, tick ingestion, OHLC bars, SQL migrations, time-series indexing.</span></div>
+              <div class="fit-row"><b>C++ Quant Foundations</b><span>C++20, CMake, tested numerical utilities, risk math, and order book fundamentals.</span></div>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">Technologies</h2>
+            <div class="chips">
+              <span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">SQL</span>
+              <span class="chip">pytest</span><span class="chip">GitHub Actions</span><span class="chip">pandas</span><span class="chip">NumPy</span>
+              <span class="chip alt">C++20</span><span class="chip alt">CMake</span><span class="chip alt">MQL5</span><span class="chip alt">MetaTrader 5</span>
+              <span class="chip">Docker</span><span class="chip">Redis</span><span class="chip">Nginx</span><span class="chip">Node.js</span>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">Quant / Trading Methods</h2>
+            <div class="chips">
+              <span class="chip alt">Risk Engines</span><span class="chip alt">Market Data Pipelines</span><span class="chip alt">Backtesting</span>
+              <span class="chip alt">Parity Testing</span><span class="chip alt">Kalman Filter</span><span class="chip alt">GARCH</span>
+              <span class="chip alt">Walk-forward Validation</span><span class="chip alt">Order Books</span><span class="chip alt">Drawdown Control</span>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">Education</h2>
+            <p><strong>B.Sc. Food Science & Technology</strong><br>University of Sargodha · 2021</p>
+            <p class="small-muted">Self-directed quant engineering roadmap: mathematics, probability, C++, market microstructure, and financial engineering.</p>
+          </section>
+        </aside>
+
+        <main>
+          <section class="section light">
+            <h2 class="section-title">Professional Summary</h2>
+            <p class="summary">
+              Quantitative trading systems developer and FinTech founder with hands-on experience building private AlphaQuant V12 infrastructure and public-safe engineering proof repositories.
+              Focus areas include trading-system architecture, risk engines, market-data pipelines, PostgreSQL, Python backend services, C++ quant foundations, testing discipline, and research-to-live reliability.
+            </p>
+          </section>
+
+          <section class="section light" id="portfolio">
+            <h2 class="section-title">Selected Public Portfolio</h2>
+            <div class="project-grid">
+              <div class="project-card">
+                <h3>AlphaQuant V12 Case Study</h3>
+                <p>Sanitized case study covering trading-system architecture, risk governance, QMS testing philosophy, and research-to-live parity.</p>
+                <a href="https://github.com/mmudassar874/alphaquant-v12-case-study" target="_blank" rel="noopener">View repository →</a>
+              </div>
+
+              <div class="project-card">
+                <h3>Trading Risk Engine Python</h3>
+                <p>Tested Python risk-engine demo with validation gates, volatility/drawdown controls, position sizing, pytest, and CI.</p>
+                <a href="https://github.com/mmudassar874/trading-risk-engine-python" target="_blank" rel="noopener">View repository →</a>
+              </div>
+
+              <div class="project-card">
+                <h3>Market Data Pipeline Postgres</h3>
+                <p>PostgreSQL + Python demo for synthetic tick ingestion, OHLC construction, SQL migrations, data-quality audits, and Postgres CI.</p>
+                <a href="https://github.com/mmudassar874/market-data-pipeline-postgres" target="_blank" rel="noopener">View repository →</a>
+              </div>
+
+              <div class="project-card">
+                <h3>C++ Quant Lab</h3>
+                <p>C++20 quant math lab: returns, volatility, rolling statistics, z-score, max drawdown, position sizing, CMake, and CI.</p>
+                <a href="https://github.com/mmudassar874/cpp-quant-lab" target="_blank" rel="noopener">View repository →</a>
+              </div>
+
+              <div class="project-card">
+                <h3>Order Book and Low-Latency C++</h3>
+                <p>Educational C++ order book demo: best bid/ask, spread, FIFO matching, market orders, cancel logic, tests, and CI.</p>
+                <a href="https://github.com/mmudassar874/orderbook-and-low-latency-cpp" target="_blank" rel="noopener">View repository →</a>
+              </div>
+            </div>
+          </section>
+
+          <section class="section light" id="projects">
+            <h2 class="section-title">Private System Work</h2>
+            <div class="timeline">
+              <article class="entry">
+                <h3>AlphaQuant V12</h3>
+                <div class="role-line">Sole Architect & Developer · Private systematic trading infrastructure</div>
+                <p class="tagline">Private XAUUSD trading-system architecture combining market-data processing, regime/risk logic, ML filtering, execution control, and validation.</p>
+                <ul class="clean">
+                  <li>Built a multi-layer signal-to-decision architecture with governance gates, market context, signal logic, risk controls, and ML filtering.</li>
+                  <li>Designed PostgreSQL-backed market-data and signal-lifecycle storage with audit and validation workflows.</li>
+                  <li>Implemented automated testing culture including QMS tests, parity checks, robustness checks, and live/offline consistency validation.</li>
+                  <li>Created public-safe case-study and demo repositories to show engineering discipline without exposing private production code.</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section class="section light">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline">
+              <article class="entry">
+                <h3>Data Intelligence</h3>
+                <div class="role-line">Solo Founder & CTO · Trade Analytics SaaS · Lahore, Pakistan · 2025 – Present</div>
+                <ul class="clean">
+                  <li>Built production analytics infrastructure using PostgreSQL, backend services, dashboarding, automation, and security controls.</li>
+                  <li>Developed data workflows and AI-assisted analytics tooling for trade intelligence use cases.</li>
+                </ul>
+              </article>
+
+              <article class="entry">
+                <h3>Orient Apparel / Orient Material</h3>
+                <div class="role-line">Executive Assistant & Technology Project Lead · Lahore, Pakistan · 2021 – 2025</div>
+                <ul class="clean">
+                  <li>Delivered technology, dashboard, CRM, automation, and operations projects across business teams.</li>
+                  <li>Built dashboards and process improvements while self-studying algorithmic trading, Python, data systems, and quantitative methods.</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section class="section light">
+            <h2 class="section-title">Role Fit</h2>
+            <div class="proof-grid">
+              <div class="proof-card"><h4>Quant Developer</h4><p>Trading-system architecture, Python, C++, market data, tests, and research-to-live validation.</p></div>
+              <div class="proof-card"><h4>Trading Systems Engineer</h4><p>Risk controls, execution-side thinking, system boundaries, state tracking, and failure-safe design.</p></div>
+              <div class="proof-card"><h4>Market Data Engineer</h4><p>PostgreSQL schemas, tick ingestion, OHLC bars, SQL validation, time-series indexing, and CI.</p></div>
+              <div class="proof-card"><h4>Risk Infrastructure Developer</h4><p>Drawdown controls, spread gates, volatility-aware sizing, tests, and audit-focused thinking.</p></div>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <footer class="footer-note">
+        This web resume is a public recruiter-facing summary. Private production code, real trading data, credentials, and proprietary strategy logic are not published.
+      </footer>
+    </article>
+  </div>
+</body>
+</html>
