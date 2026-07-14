@@ -129,6 +129,31 @@ Demonstrates:
 
 ---
 
+
+---
+
+### 6. Data Intelligence SaaS Case Study
+
+Public-safe case study of a private SaaS analytics platform combining Node.js / Express-style portal access logic, PostgreSQL ETL, Superset embedded dashboards, classification governance, and observability.
+
+[View Repository](https://github.com/mmudassar874/data-intelligence-saas-case-study)
+
+Demonstrates:
+
+- SaaS analytics architecture
+- Node.js / Express-style access-control logic
+- Subscription-gated dashboard access
+- Apache Superset embedded analytics pattern
+- PostgreSQL analytical modeling
+- Python ETL and classification demo
+- JavaScript portal access demo
+- Master-data governance workflow
+- Observability design
+- Python + JavaScript tests
+- GitHub Actions CI
+
+![Tests](https://github.com/mmudassar874/data-intelligence-saas-case-study/actions/workflows/tests.yml/badge.svg)
+
 ## Engineering Focus
 
 | Area | Focus |
@@ -153,6 +178,7 @@ Demonstrates:
 | market-data-pipeline-postgres | Public | PostgreSQL market-data pipeline demo |
 | cpp-quant-lab | Public | C++ quant math and risk fundamentals |
 | orderbook-and-low-latency-cpp | Public | C++ order book and market microstructure fundamentals |
+| data-intelligence-saas-case-study | Public | SaaS analytics case study: Node.js / Express-style portal access, PostgreSQL ETL, Superset embedding, classification governance, and observability |
 
 ---
 
@@ -172,20 +198,21 @@ Demonstrates:
 
 ## Technical Stack
 
-**Languages:** Python, MQL5, SQL, C++  
-**Backend:** FastAPI, REST APIs, background services  
-**Data:** PostgreSQL, pandas, NumPy, market-data pipelines  
+**Languages:** Python, JavaScript, SQL, MQL5, C++  
+**Backend / Portal:** FastAPI, REST APIs, Node.js / Express-style SaaS portal logic, background services  
+**Data / Analytics:** PostgreSQL, pandas, NumPy, market-data pipelines, analytical warehouse design, materialized views  
+**Embedded BI / SaaS:** Apache Superset-style embedded dashboards, subscription-gated dashboard access, access-control workflows  
+**Trading:** MetaTrader 5, MQL5, systematic trading architecture, risk governance  
 **C++:** C++20, CMake, numerical utilities, risk math, order book fundamentals  
-**Testing:** pytest, C++ test executables, integration testing, GitHub Actions  
-**Trading:** MetaTrader 5, systematic trading architecture, risk governance  
-**Tools:** Git, GitHub Actions, VS Code, Windows/PowerShell workflows  
-
+**Testing / CI:** pytest, Node.js test runner, C++ tests, integration tests, GitHub Actions  
+**Infrastructure / Tools:** Git, GitHub Actions, Redis concepts, Docker/Superset infrastructure concepts, VS Code, Windows/PowerShell workflows  
 ---
 
 ## Contact
 
 - GitHub: [mmudassar874](https://github.com/mmudassar874)
 - LinkedIn: [Muhammad Mudassir](https://www.linkedin.com/in/muhammdmudassir/)
+
 
 
 
