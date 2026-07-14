@@ -198,20 +198,21 @@ Demonstrates:
 
 ## Technical Stack
 
-**Languages:** Python, JavaScript, SQL, MQL5, C++  
-**Backend / Portal:** FastAPI, REST APIs, Node.js / Express-style SaaS portal logic, background services  
-**Data / Analytics:** PostgreSQL, pandas, NumPy, market-data pipelines, analytical warehouse design, materialized views  
-**Embedded BI / SaaS:** Apache Superset-style embedded dashboards, subscription-gated dashboard access, access-control workflows  
-**Trading:** MetaTrader 5, MQL5, systematic trading architecture, risk governance  
-**C++:** C++20, CMake, numerical utilities, risk math, order book fundamentals  
-**Testing / CI:** pytest, Node.js test runner, C++ tests, integration tests, GitHub Actions  
-**Infrastructure / Tools:** Git, GitHub Actions, Redis concepts, Docker/Superset infrastructure concepts, VS Code, Windows/PowerShell workflows  
----
-
+| Area | Stack |
+|---|---|
+| Languages | Python, JavaScript, SQL, MQL5, C++ |
+| Backend / Portal | FastAPI, REST APIs, Node.js / Express-style SaaS portal logic, background services |
+| Data / Analytics | PostgreSQL, pandas, NumPy, market-data pipelines, analytical warehouse design, materialized views |
+| Embedded BI / SaaS | Apache Superset-style embedded dashboards, subscription-gated dashboard access, access-control workflows |
+| Trading Systems | MetaTrader 5, MQL5, systematic trading architecture, risk governance |
+| C++ Engineering | C++20, CMake, numerical utilities, risk math, order book fundamentals |
+| Testing / CI | pytest, Node.js test runner, C++ tests, integration tests, GitHub Actions |
+| Infrastructure / Tools | Git, GitHub Actions, Redis concepts, Docker/Superset infrastructure concepts, VS Code, Windows/PowerShell workflows |
 ## Contact
 
 - GitHub: [mmudassar874](https://github.com/mmudassar874)
 - LinkedIn: [Muhammad Mudassir](https://www.linkedin.com/in/muhammdmudassir/)
+
 
 
 
